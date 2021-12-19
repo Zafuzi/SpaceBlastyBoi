@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/339544__cabled-mess__analogue-white-noise.wav-4b636da7f82901b5a0f966be0458612f.sample"
+
+[deps]
+
+source_file="res://Sounds/339544__cabled-mess__analogue-white-noise.wav"
+dest_files=[ "res://.import/339544__cabled-mess__analogue-white-noise.wav-4b636da7f82901b5a0f966be0458612f.sample" ]
+
+[params]
+
+force/8_bit=true
+force/mono=true
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=true
+compress/mode=0

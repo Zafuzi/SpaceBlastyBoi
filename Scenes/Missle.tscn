@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Sprites/Missle2.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Missle1.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/Missle.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/ShootSound.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/MissleTravelSound.tscn" type="PackedScene" id=5]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 6.51891
+height = 19.37
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "idle",
+"speed": 16.0
+} ]
+
+[node name="Missle" type="RigidBody2D"]
+collision_layer = 2
+collision_mask = 2
+mode = 3
+gravity_scale = 0.0
+contacts_reported = 2
+contact_monitor = true
+script = ExtResource( 3 )
+ShootSound = ExtResource( 4 )
+TravelSound = ExtResource( 5 )
+
+[node name="MissleCollision" type="CollisionShape2D" parent="."]
+rotation = 1.57079
+shape = SubResource( 1 )
+
+[node name="MissleSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 2 )
+animation = "idle"
+frame = 1
+playing = true
+
+[node name="MissleNotifier" type="VisibilityNotifier2D" parent="."]
+position = Vector2( 0.0662912, 0.0220963 )
+scale = Vector2( 1.30212, 0.595623 )
+
+[node name="Sounds" type="Node" parent="."]
+[connection signal="body_entered" from="." to="." method="_on_Missle_body_entered"]
+[connection signal="screen_exited" from="MissleNotifier" to="." method="_on_MissleNotifier_screen_exited"]

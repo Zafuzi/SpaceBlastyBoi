@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Sounds/339544__cabled-mess__analogue-white-noise.wav" type="AudioStream" id=1]
+
+[node name="ShootSound" type="AudioStreamPlayer2D"]
+stream = ExtResource( 1 )
+volume_db = -25.0
+pitch_scale = 0.12
+autoplay = true
+max_distance = 700.0
+attenuation = 3.03143

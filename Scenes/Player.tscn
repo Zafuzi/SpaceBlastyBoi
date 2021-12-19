@@ -1,0 +1,45 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Sprites/TurretBase3.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/TurretBase2.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/TurretBase6.png" type="Texture" id=3]
+[ext_resource path="res://Sprites/TurretBase5.png" type="Texture" id=4]
+[ext_resource path="res://Sprites/TurretBase4.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/TurretBase1.png" type="Texture" id=6]
+[ext_resource path="res://Scripts/Player.gd" type="Script" id=8]
+[ext_resource path="res://Sprites/TurrretTop.png" type="Texture" id=9]
+[ext_resource path="res://Sprites/TurretBase8.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/TurretBase7.png" type="Texture" id=11]
+[ext_resource path="res://Scenes/Missle.tscn" type="PackedScene" id=12]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 6 ), ExtResource( 2 ), ExtResource( 1 ), ExtResource( 5 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 11 ), ExtResource( 10 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 16.0312
+
+[node name="Player" type="KinematicBody2D"]
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true
+}
+Missle = ExtResource( 12 )
+
+[node name="PlayerSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "idle"
+frame = 7
+playing = true
+
+[node name="PlayerCollision" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="TurrretTop" type="Sprite" parent="."]
+texture = ExtResource( 9 )
+
+[node name="ShootSounds" type="Node2D" parent="."]
