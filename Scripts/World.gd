@@ -10,6 +10,7 @@ export(int) var score
 
 func _ready():
 	projectResolution = get_viewport_rect().size
+	$Player.position = Vector2(projectResolution.x/2, projectResolution.y/2)
 	#print(projectResolution)
 
 func _process(delta):

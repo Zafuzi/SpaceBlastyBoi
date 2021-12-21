@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/testerbox.png-88aba661c2bc4400d32ef56173d49b9c.stex"
+path="res://.import/coverArt4.png-c4a8a08b5fd59f4c8f74e00aa0c83895.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/testerbox.png"
-dest_files=[ "res://.import/testerbox.png-88aba661c2bc4400d32ef56173d49b9c.stex" ]
+source_file="res://Sprites/coverArt4.png"
+dest_files=[ "res://.import/coverArt4.png-c4a8a08b5fd59f4c8f74e00aa0c83895.stex" ]
 
 [params]
 

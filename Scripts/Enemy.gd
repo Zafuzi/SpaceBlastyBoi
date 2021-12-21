@@ -17,7 +17,7 @@ func _physics_process(delta):
 	
 func _on_Enemy_body_entered(body):
 	if body.name == "Player":
-		get_tree().change_scene("res://GameOver.tscn")
+		get_tree().change_scene("res://Scenes/GameOver.tscn")
 
 func _on_screen_exited():
 	die()
