@@ -16,15 +16,15 @@ _global_script_class_icons={
 [application]
 
 config/name="SpaceBlastyBoi"
-run/main_scene="res://Scenes/World.tscn"
+run/main_scene="res://Scenes/StartMenu.tscn"
 boot_splash/bg_color=Color( 0.0627451, 0.0156863, 0.141176, 1 )
 
 [display]
 
-window/size/width=640
-window/size/height=360
+window/size/width=800
 window/size/test_width=1280
 window/size/test_height=720
+window/dpi/allow_hidpi=true
 window/stretch/mode="2d"
 window/stretch/aspect="expand"
 
@@ -45,7 +45,6 @@ ui_escape={
 
 [rendering]
 
-quality/driver/fallback_to_gles2=true
 quality/2d/use_pixel_snap=true
 quality/filters/anisotropic_filter_level=16
 quality/subsurface_scattering/quality=2

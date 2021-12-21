@@ -12,7 +12,6 @@ Enemy = ExtResource( 5 )
 MAX_ENEMIES = 40
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 320, 180 )
 MAX_MISSLES = 3
 
 [node name="GUI" parent="." instance=ExtResource( 4 )]
